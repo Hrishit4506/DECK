@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: clash-royale-deck-analyzer
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: CLASH_API_TOKEN
+        sync: false
+    plan: free

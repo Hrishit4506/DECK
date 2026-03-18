@@ -1,0 +1,68 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Deck Analysis</h1>
+
+<form method="POST">
+  <div class="input-group">
+    <input
+      type="text"
+      name="player_tag"
+      placeholder="#PLAYER_TAG"
+      required
+    />
+    <button type="submit">Analyze Deck</button>
+  </div>
+</form>
+
+{% if error %}
+<div class="error">{{ error }}</div>
+{% endif %}
+
+{% if deck %}
+  <h2>Current Deck</h2>
+
+  <div class="deck-stats">
+    <span class="badge archetype">{{ archetype }}</span>
+    <span class="badge elixir">Avg Elixir: {{ avg_elixir }}</span>
+    <span class="badge f2p">F2P Score: {{ f2p_score }}</span>
+  </div>
+
+  <div class="card-grid">
+    {% for card in deck %}
+    <div class="card rarity-{{ card.rarity }}">
+      <img src="{{ card.iconUrls.medium }}" alt="{{ card.name }}" />
+      <h3>{{ card.name }}</h3>
+      <p>Elixir: {{ card.elixirCost|default("?") }}</p>
+      <p class="rarity-text">{{ card.rarity|title }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if warnings %}
+  <div class="warnings">
+    {% for w in warnings %}
+    <div class="warning">{{ w }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <hr />
+
+  {% for category, cards in categories.items() %}
+    {% if cards|length > 0 %}
+    <h3>{{ category }}</h3>
+    <div class="card-grid">
+      {% for card in cards %}
+      <div class="card rarity-{{ card.rarity }}">
+        <img src="{{ card.iconUrls.medium }}" alt="{{ card.name }}" />
+        <h3>{{ card.name }}</h3>
+        <p>Elixir: {{ card.elixirCost|default("?") }}</p>
+        <p class="rarity-text">{{ card.rarity|title }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Clash Royale Deck Analyzer</h1>
+
+<form method="POST" action="{{ url_for('deck_analysis') }}">
+  <div class="input-group">
+    <input
+      type="text"
+      name="player_tag"
+      placeholder="#PLAYER_TAG"
+      required
+    />
+    <button type="submit">Get Started</button>
+  </div>
+</form>
+
+<div style="text-align: center; margin-top: 40px; color: var(--text-secondary)">
+  <p>Enter your player tag to analyze your deck and collection</p>
+  <p style="font-size: 14px; margin-top: 8px">
+    Example: #2GY9JCJYP or #8L9V2J8V
+  </p>
+</div>
+
+{% endblock %}

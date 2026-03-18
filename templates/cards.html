@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>All Clash Royale Cards</h1>
+
+<div class="card-grid">
+  {% for card in cards %}
+  <div class="card rarity-{{ card.rarity }}">
+    <img src="{{ card.iconUrls.medium }}" alt="{{ card.name }}" />
+    <h3>{{ card.name }}</h3>
+    <p>Elixir: {{ card.elixirCost|default("?") }}</p>
+    <p class="rarity-text">{{ card.rarity|title }}</p>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,129 @@
+{
+  "primary_win": [
+    "Hog Rider",
+    "Balloon",
+    "Royal Giant",
+    "Giant",
+    "Golem",
+    "Lava Hound",
+    "Electro Giant",
+    "Graveyard",
+    "Goblin Drill",
+    "X-Bow",
+    "Mortar",
+    "Three Musketeers"
+  ],
+
+  "secondary_win": [
+    "Miner",
+    "Goblin Barrel",
+    "Ram Rider",
+    "Battle Ram",
+    "Skeleton Barrel",
+    "Wall Breakers",
+    "Royal Hogs"
+  ],
+
+  "spells": [
+    "Fireball",
+    "Zap",
+    "Arrows",
+    "Poison",
+    "Lightning",
+    "Rocket",
+    "Freeze",
+    "Rage",
+    "Tornado",
+    "Clone",
+    "Earthquake",
+    "Barbarian Barrel",
+    "Giant Snowball",
+    "The Log",
+    "Royal Delivery",
+    "Void",
+    "Goblin Curse",
+    "Heal Spirit"
+  ],
+
+  "buildings": [
+    "Cannon",
+    "Tesla",
+    "Inferno Tower",
+    "Bomb Tower",
+    "Goblin Hut",
+    "Barbarian Hut",
+    "Furnace",
+    "Goblin Cage",
+    "Tombstone",
+    "Elixir Collector"
+  ],
+
+  "tanks": [
+    "Knight",
+    "Valkyrie",
+    "Mini P.E.K.K.A",
+    "P.E.K.K.A",
+    "Ice Golem",
+    "Giant Skeleton",
+    "Mega Knight",
+    "Goblin Giant",
+    "Elixir Golem",
+    "Battle Healer",
+    "Prince",
+    "Dark Prince",
+    "Golden Knight",
+    "Skeleton King",
+    "Monk",
+    "Boss Bandit"
+  ],
+
+  "ranged_support": [
+    "Musketeer",
+    "Wizard",
+    "Executioner",
+    "Hunter",
+    "Magic Archer",
+    "Firecracker",
+    "Dart Goblin",
+    "Electro Wizard",
+    "Mother Witch",
+    "Bowler",
+    "Baby Dragon",
+    "Inferno Dragon",
+    "Electro Dragon",
+    "Phoenix",
+    "Flying Machine",
+    "Princess"
+  ],
+
+  "swarm_cycle": [
+    "Skeletons",
+    "Bats",
+    "Goblins",
+    "Spear Goblins",
+    "Goblin Gang",
+    "Skeleton Army",
+    "Minions",
+    "Minion Horde",
+    "Guards",
+    "Ice Spirit",
+    "Fire Spirit",
+    "Electro Spirit",
+    "Heal Spirit",
+    "Skeleton Dragons",
+    "Royal Recruits",
+    "Rascals",
+    "Zappies"
+  ],
+
+  "champions": [
+    "Archer Queen",
+    "Golden Knight",
+    "Skeleton King",
+    "Monk",
+    "Mighty Miner",
+    "Little Prince",
+    "Goblinstein",
+    "Boss Bandit"
+  ]
+}
