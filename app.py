@@ -8,7 +8,7 @@ app = Flask(__name__)
 # ---------- API CONFIG ----------
 
 API_TOKEN = os.getenv("CLASH_API_TOKEN", ".env")  # safer
-API_BASE = "https://api.clashroyale.com/v1"
+API_BASE = "https://proxy.royaleapi.dev/v1"
 
 HEADERS = {
     "Authorization": f"Bearer {API_TOKEN}"
@@ -56,11 +56,17 @@ def fetch_player(tag):
     tag = tag.replace("#", "%23")
     url = f"{API_BASE}/players/{tag}"
 
+n    print(f"DEBUG: Fetching player from {url}")
+    print(f"DEBUG: Using API_BASE: {API_BASE}")
+    print(f"DEBUG: Token set: {bool(API_TOKEN)}")
     try:
         res = requests.get(url, headers=HEADERS, timeout=10)
         if res.status_code == 200:
+        print(f"DEBUG: Response status: {res.status_code}")
             return res.json()
-    except requests.RequestException:
+            print(f"DEBUG: Error response: {res.text[:200]}")
+    except requests.RequestException as e:
+        print(f"DEBUG: Exception = {e}")
         pass
 
     return None
