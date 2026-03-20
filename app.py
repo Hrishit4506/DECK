@@ -85,7 +85,7 @@ def calculate_f2p_score(deck):
         "legendary": 0,
         "champion": -1
     }
-    return sum(weights.get(card.get("rarity"), 0) for card in deck)
+    return (sum(weights.get(card.get("rarity"), 0) for card in deck)/24)*100
 
 def get_deck_warnings(categories):
     warnings = []
